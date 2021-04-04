@@ -28,7 +28,7 @@ class Drawer:
 
     penPosition = True
     output = False
-    penCode = [1000,0]
+    penCode = [0,1000]
     X = []
 
 
