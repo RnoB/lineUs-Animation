@@ -38,7 +38,7 @@ class Drawer:
     def toPosition(self,x0,y0,penPosition):
 
         if x0 < sizeMax[0] and y0<sizeMax[1] and x0>=0 and y0>=0:
-            self.drawer.g01(x0+offset[0],y0+offset[1],penCode[penPosition])
+            self.drawer.g01(x0+offset[0],y0+offset[1],self.penCode[penPosition])
 
 
 
