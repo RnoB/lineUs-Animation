@@ -28,7 +28,7 @@ class Drawer:
 
     penPosition = True
     output = False
-    penCode = [0,1000]
+    penCode = [1000,0]
     X = []
 
 
@@ -52,17 +52,17 @@ class Drawer:
         
         xf = x0+length*math.cos(angle)
         yf = y0+length*math.sin(angle)
-        self.toPosition(x0,y0,1)
         self.toPosition(x0,y0,0)
-        self.toPosition(xf,yf,0)
+        self.toPosition(x0,y0,1)
         self.toPosition(xf,yf,1)
+        self.toPosition(xf,yf,0)
         
 
     def lines(self,x,y):
         x0 = x[0]
         y0 = y[0]
-        self.toPosition(x0,y0,1)
         self.toPosition(x0,y0,0)
+        self.toPosition(x0,y0,1)
 
         k0=0
         try:
@@ -70,15 +70,16 @@ class Drawer:
                 k0 = k
                 x0 = x[k0]
                 y0 = y[k0]
-                self.toPosition(x0,y0,0)
-            self.toPosition(x0,y0,1)
+                self.toPosition(x0,y0,1)
+            self.toPosition(x0,y0,0)
         except:
             print('--- CRASH !!!! ---')
             print("length : "+str(len(x)))
             print("  k0   : "+str(k0))
-            self.toPosition(x[0],y[0],1)
+            self.toPosition(x[0],y[0],0)
 
 
     def __init__(self,output = False,dx = 0,dy=0,de = 40):
         self.drawer = LineUs()
         self.drawer.connect()
+        self.drawer.toPosition(0,0,0)
