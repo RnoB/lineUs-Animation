@@ -82,4 +82,4 @@ class Drawer:
     def __init__(self,output = False,dx = 0,dy=0,de = 40):
         self.drawer = LineUs()
         self.drawer.connect()
-        self.drawer.toPosition(0,0,0)
+        self.toPosition(0,0,0)
