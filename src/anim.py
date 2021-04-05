@@ -2,7 +2,7 @@ import kinecter.kinecter as kinecter
 import drawer.drawer as drawer
 import time
 import traceback
-
+import numpy as np
 
 def round(x, base=1):
     return base * np.round(x/base)
@@ -137,7 +137,7 @@ def main():
     kinect.start()
     kinect.backGroundSubstractor(nFrames=100)
     kinect.stop()
-    time.sleep(30)
+    time.sleep(10)
     kinect.start()
     kinect.getDepthFrames(nFrames = nFrames,delay=.01,maxDepth=2049)
     kinect.stop()
