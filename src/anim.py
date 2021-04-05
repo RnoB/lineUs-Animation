@@ -3,6 +3,7 @@ import drawer.drawer as drawer
 import time
 import traceback
 import numpy as np
+import random
 
 def round(x, base=1):
     return base * np.round(x/base)
