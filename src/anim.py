@@ -107,7 +107,7 @@ def drawing(kFrames,frames,angle,angleZ,draw,
         if size>0:
             #print("X : "+str(np.min(xLines))+" Y : "+str(np.min(yLines)))
             
-            draw.lines(xLines,yLines,xOffset = - widthPaper/2.0)
+            draw.lines(xLines,yLines)
             for position in linePosition:
                 imagePosition.append((round(position[0],distanceLine),round(position[1],distanceLine)))
                 repetitionPosition.append((round(position[0],distanceFigure),round(position[1],distanceFigure)))
