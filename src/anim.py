@@ -49,7 +49,7 @@ def drawing(kFrames,frames,angle,angleZ,draw,
                 kx = random.randint(0, 639)
                 ky = random.randint(0, 479)
                 x,y = scaler(kx,ky,scale=scale,offsetX=offsetX,offsetY=offsetY)
-                print((x,y))
+
                 x = round(x+(.5-random.random())*xu,resolution/2.0)
                 y = round(y+(.5-random.random())*yu,resolution/2.0)
                 x1 = round(x,distanceLine)
@@ -86,7 +86,7 @@ def drawing(kFrames,frames,angle,angleZ,draw,
                 and (dx1,dy1) not in imagePosition \
                 and (dx2,dy2) not in figurePosition \
                 and AZ[ky,kx]-A0<1.5 \
-                and dx < 170 and dy < 250 \
+                and dx < 1125 and dy < 2000 \
                 and dx > 0 and dy > 0:
                     
                     x=dxS
