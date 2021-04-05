@@ -157,7 +157,7 @@ def main():
 
 
 
-            drawing(kFrames,kinect.frames,angle,angleZ,draw,nLines = 25,scale = scale,A0=0,\
+            drawing(kFrames,kinect.frames,angle,angleZ,draw,nLines = 100,scale = scale,A0=0,\
                     distanceLine = 4  ,speed = 4)
             time.sleep(30)
 
