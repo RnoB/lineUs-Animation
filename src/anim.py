@@ -81,7 +81,7 @@ def drawing(kFrames,frames,angle,angleZ,draw,
 
                 if (dxk > -1) and (dxk < 640) \
                 and (dyk > -1) and (dyk < 480) \
-                and size < 100 \
+                and size < 2000 \
                 and (dx,dy) not in linePosition\
                 and (dx1,dy1) not in imagePosition \
                 and (dx2,dy2) not in figurePosition \
@@ -159,7 +159,7 @@ def main():
 
             drawing(kFrames,kinect.frames,angle,angleZ,draw,nLines = 25,scale = scale,A0=0,\
                     distanceLine = 4  ,speed = 4)
-            
+            time.sleep(30)
 
     except Exception as e: 
         print(traceback.format_exc())
