@@ -155,13 +155,13 @@ def main():
 
 
 
-            X2 = drawing(kFrames,kinect.frames,angle,angleZ,draw,nLines = 250,scale = scale,A0=0,\
-                    offsetX = offsetX,offsetY=offsetY,figurePosition = X2,distanceLine = 4  ,speed = 4)
+            drawing(kFrames,kinect.frames,angle,angleZ,draw,nLines = 25,scale = scale,A0=0,\
+                    distanceLine = 4  ,speed = 4)
             
 
     except Exception as e: 
         print(traceback.format_exc())
-        draw.toPosition(0,0)
+        draw.toPosition(0,0,0)
     draw.closeDrawer()  
 
 
